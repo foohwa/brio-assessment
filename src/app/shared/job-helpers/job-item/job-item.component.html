@@ -1,0 +1,13 @@
+<article class="job-card">
+  <div class="job-card__content">
+    <div class="title">
+      <p>{{ job.title }}</p>
+      <span>{{ job.updatedAt | daysBetween }}
+        <ng-container *ngIf="job.level">{{ '• ' + job.level + ' level' }}</ng-container> </span>
+    </div>
+    <p class="location"><span></span>{{ job.location }}</p>
+    <button class="button" (click)="editJob()">Edit Job</button>
+  </div>
+</article>
+
+<app-edit-job [displayModal]="display" [job]="job" (update)="closeModal($event)"></app-edit-job>

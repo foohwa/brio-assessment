@@ -1,0 +1,55 @@
+.hero {
+  width: 100vw;
+  height: auto;
+}
+
+.hero__container {
+  background-image: url('/assets/img/image.png');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 350px;
+  position: relative;
+}
+
+.hero__content {
+  padding-top: 5rem;
+  text-align: center;
+
+  h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 2em;
+  }
+
+  p {
+    cursor: pointer;
+    margin-top: .7rem;
+    display: inline-block;
+    color: #fbe260;
+    font-size: .9em;
+  }
+}
+
+.introduction {
+  position: relative;
+  margin-top: -150px;
+  z-index: 100;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .introduction__content {
+    background-color: #fff;
+    padding: 2rem;
+    border: .5px solid rgba(46, 65, 85, 0.2);;
+    border-radius: 3px;
+    line-height: 1.4;
+    font-size: .9em;
+    font-weight: 300;
+  }
+}
+
+.job-board {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
+}

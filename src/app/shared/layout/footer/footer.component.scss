@@ -1,0 +1,38 @@
+footer {
+  border-top: .5px solid #dee2e6;
+}
+
+.footer-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  font-size: .75em;
+  color: #7a8a9b;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      cursor: pointer;
+      margin-left: .5rem;
+    }
+  }
+
+  &__policy {
+    margin-top: .5rem;
+
+    span > a {
+      cursor: pointer;
+      color: #18C472;
+      text-decoration: none;
+
+      &:hover {
+        color: #02a284;
+      }
+    }
+  }
+}

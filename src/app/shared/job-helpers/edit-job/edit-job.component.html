@@ -1,0 +1,18 @@
+<p-dialog header="Edit Job" [(visible)]="displayModal" [modal]="true" [draggable]="false" [resizable]="false"
+          [style]="{width: '70vw'}" [baseZIndex]="10000" (onHide)="closeModal()">
+
+  <form [formGroup]="jobForm" (ngSubmit)="updateJob()">
+    <label for="title">Job Title </label>
+    <input id="title" type="text" formControlName="title">
+    <div class="error-msg" *ngIf="jobForm.get('title').hasError('required')">Title must no be empty</div>
+
+    <label for="location">Location </label>
+    <input id="location" type="text" formControlName="location">
+    <div class="error-msg" *ngIf="jobForm.get('location').hasError('required')">Location must no be empty</div>
+
+    <label for="level">Level </label>
+    <input id="level" type="text" formControlName="level">
+
+    <button type="submit" [disabled]="!jobForm.dirty || !jobForm.valid">Update Job</button>
+  </form>
+</p-dialog>

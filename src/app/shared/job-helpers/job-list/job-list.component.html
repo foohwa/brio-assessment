@@ -1,0 +1,9 @@
+<div *ngFor="let item of jobs | keyvalue" class="card-list">
+  <div>
+    <div class="card-list__header">
+      <h4>{{item.key | uppercase}}</h4>
+      <span hidden>1 Openings</span>
+    </div>
+    <job-item *ngFor="let value of item.value" [job]="value"></job-item>
+  </div>
+</div>
