@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Job, JobService } from '../core';
+import { JobBoard, JobService } from '../core';
 
 @Component({
   selector: 'app-job-board',
@@ -10,7 +10,7 @@ import { Job, JobService } from '../core';
   styleUrls: ['./job-board.component.scss'],
 })
 export class JobBoardComponent implements OnInit {
-  jobs$: Observable<Job[]>;
+  jobs$: Observable<JobBoard>;
   totalJob$: Observable<number>;
 
   constructor(private jobService: JobService) {}
@@ -30,7 +30,7 @@ export class JobBoardComponent implements OnInit {
           }
           newJobs[department].push(rest);
           return newJobs;
-        }, [] as any);
+        }, {} as JobBoard);
       })
     );
   }

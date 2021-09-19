@@ -15,13 +15,14 @@ import { Job } from '../../../core';
 })
 export class JobItemComponent implements OnInit {
   @Input() job: Partial<Job>;
+
   display: boolean = false;
 
   constructor() {}
 
   ngOnInit() {}
 
-  editJob() {
+  openModal() {
     this.display = true;
   }
 

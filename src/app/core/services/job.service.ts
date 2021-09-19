@@ -36,7 +36,6 @@ export class JobService {
       }),
       tap(() => {
         this._jobsSubject$.next(updatedJobs);
-        console.log(this._jobsSubject$.value);
       })
     );
   }

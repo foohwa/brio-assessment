@@ -2,7 +2,7 @@
   <div>
     <div class="card-list__header">
       <h4>{{item.key | uppercase}}</h4>
-      <span hidden>1 Openings</span>
+      <span>{{ jobs[item.key].length }} Openings</span>
     </div>
     <job-item *ngFor="let value of item.value" [job]="value"></job-item>
   </div>

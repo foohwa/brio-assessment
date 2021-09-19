@@ -5,6 +5,8 @@ import {
   OnInit,
 } from '@angular/core';
 
+import { JobBoard } from '../../../core';
+
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'job-list',
@@ -12,15 +14,9 @@ import {
   styleUrls: ['./job-list.component.scss'],
 })
 export class JobListComponent implements OnInit {
-  @Input() jobs = {};
-
-  get sectionJobTotal() {
-    return Object.values(this.jobs).length;
-  }
+  @Input() jobs: JobBoard;
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.jobs);
-  }
+  ngOnInit() {}
 }
